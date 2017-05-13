@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="urn:fdc:difi.no:2017:payment:extras-1"
+           xmlns:sbdh="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+           targetNamespace="urn:fdc:difi.no:2017:payment:extras-1"
+           elementFormDefault="qualified" attributeFormDefault="qualified">
+
+    <xs:import namespace="http://www.unece.org/cefact/namespaces/StandardBusinessDocumentHeader"
+               schemaLocation="../sbdh/StandardBusinessDocumentHeader.xsd"/>
+
+    <xs:element name="ReceptionAcknowledgement" type="ReceptionAcknowledgementType"/>
+    <xs:complexType name="ReceptionAcknowledgementType">
+        <xs:sequence>
+            <xs:element name="Version" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="sbdh:StandardBusinessDocumentHeader" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Metadata" type="MetadataType"/>
+    <xs:complexType name="MetadataType">
+        <xs:sequence>
+            <xs:element name="Version" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="SenderIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="DivisionIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="UserIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="HandlingException" type="HandlingExceptionType"/>
+    <xs:complexType name="HandlingExceptionType">
+        <xs:sequence>
+            <xs:element name="Version" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Exception" type="ExceptionType" minOccurs="0" maxOccurs="1"/>
+            <xs:element ref="sbdh:StandardBusinessDocumentHeader" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ExceptionType">
+        <xs:sequence>
+            <xs:element name="Code" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

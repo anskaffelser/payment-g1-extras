@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buildConfigurations xmlns="http://difi.no/xsd/vefa/validator/1.0">
+
+	<testfolder>example</testfolder>
+
+	<configuration>
+		<identifier>payment-1.0</identifier>
+		<title>Difi Payment Extras (XSD)</title>
+		<file source="xsd/payment/PaymentExtras.xsd" path="xsd/payment/PaymentExtras.xsd" />
+	</configuration>
+
+	<configuration>
+		<identifier>payment-sbdh-1.0</identifier>
+		<title>PEPPOL SBDH 1.0</title>
+		<file source="sch/PEPPOL-SBDH.sch" path="xsl/PEPPOL-SBDH.xsl" />
+	</configuration>
+
+	<configuration>
+		<identifier>payment-extras-receptionacknowledgement</identifier>
+		<title>Difi Payment Extras Reception Acknowledgement 1.0</title>
+		<declaration type="xml">urn:fdc:difi.no:2017:payment:extras-1::ReceptionAcknowledgement</declaration>
+		<inherit>payment-1.0</inherit>
+		<inherit>payment-sbdh-1.0</inherit>
+		<file source="sch/PAYMENT-RA.sch" path="xsl/PAYMENT-RA.xsl" />
+	</configuration>
+
+	<configuration>
+		<identifier>payment-extras-handlingexception</identifier>
+		<title>Difi Payment Extras Handling Exception 1.0</title>
+		<declaration type="xml">urn:fdc:difi.no:2017:payment:extras-1::HandlingException</declaration>
+		<inherit>payment-1.0</inherit>
+		<inherit>payment-sbdh-1.0</inherit>
+		<file source="sch/PAYMENT-HE.sch" path="xsl/PAYMENT-HE.xsl" />
+	</configuration>
+
+	<configuration>
+		<identifier>payment-extras-metadata</identifier>
+		<title>Difi Payment Extras Metadata 1.0</title>
+		<declaration type="xml">urn:fdc:difi.no:2017:payment:extras-1::Metadata</declaration>
+		<inherit>payment-1.0</inherit>
+		<inherit>payment-sbdh-1.0</inherit>
+		<file source="sch/PAYMENT-MD.sch" path="xsl/PAYMENT-MD.xsl" />
+	</configuration>
+
+	<include path="xsd/sbdh/StandardBusinessDocumentHeader.xsd" />
+	<include path="xsd/sbdh/BasicTypes.xsd" />
+	<include path="xsd/sbdh/BusinessScope.xsd" />
+	<include path="xsd/sbdh/DocumentIdentification.xsd" />
+	<include path="xsd/sbdh/Manifest.xsd" />
+	<include path="xsd/sbdh/Partner.xsd" />
+
+</buildConfigurations>

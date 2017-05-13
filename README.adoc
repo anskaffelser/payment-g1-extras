@@ -1,0 +1,16 @@
+= Payment Extras
+
+This project specifies document types needed to fulfill requirements for transmission of ISO 20022 files in Norway.
+
+== Principles
+
+* Versioning is built into document types.
+* All elements are set to optional in the XSD to allow for better support in the validation service. Make sure to inspect the documentation to find what is mandatory.
+* Any future versions must be backwards compatible.
+
+
+== Document types
+
+* link:doc/HandlingException.adoc[Handling Exception Message]
+* link:doc/Metadata.adoc[Metadata Document]
+* link:doc/ReceptionAcknowledgement.adoc[Reception Acknowledgement Message]

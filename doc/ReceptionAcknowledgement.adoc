@@ -1,0 +1,14 @@
+= Reception Acknowledgement Message
+
+
+== Structure
+
+[cols="3,1,4", options="header"]
+|===
+| Element | Usage | Description
+3+| ReceptionAcknowledgement
+| + Version | 1..1 | Version of schema
+| + StandardBusinessDocumentHeader | 1..1 | SBDH of which this is an acknowledgement of.
+|===
+
+Element StandardBusinessDocumentHeader (SBDH) is not further descibed here, however this element must be according to the standards used. SBDH must be identical to the SBDH of which this is an reception acknowledgement of.

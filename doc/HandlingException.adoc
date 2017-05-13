@@ -1,0 +1,33 @@
+= Handling Exception Message
+
+
+== Structure
+
+[cols="3,1,4", options="header"]
+|===
+| Element | Usage | Description
+3+| HandlingException
+| + Version | 1..1 | Version of schema
+| + Exception | 1..1 | Exception
+| --+ Code | 1..1 | Code according to code list
+| --+ Description | 1..1 | Human readable description of the exception.
+| + StandardBusinessDocumentHeader | 1..1 | SBDH of which the exception is raised.
+|===
+
+Element StandardBusinessDocumentHeader (SBDH) is not further descibed here, however this element must be according to the standards used. SBDH must be identical to the SBDH of which this is an exception of.
+
+
+== Code lists
+
+
+=== Exception code
+
+[cols="1,5", options="header"]
+|===
+| Code | Description
+| 001 | Signature validation error outer ASiC
+| 002 | Signature validation error inner ASiC
+| 003 | Decryption error
+| 004 | Missing metadata
+| 005 | Missing content
+|===
