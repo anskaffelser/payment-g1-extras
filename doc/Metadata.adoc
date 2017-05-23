@@ -8,7 +8,7 @@
 | Element | Usage | Description
 3+| Metadata
 | + Version | 1..1 | Version of schema
-| + SenderIdentifier | 1..1 | Sender/customer identifier
+| + CustomerIdentifier | 1..1 | Customer identifier
 | + DivisionIdentifier | 0..1 | Division of sender
 | + UserIdentifier | 0..1 | User/signer identifier
 |===

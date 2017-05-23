@@ -20,7 +20,7 @@
     <xs:complexType name="MetadataType">
         <xs:sequence>
             <xs:element name="Version" type="xs:string" minOccurs="0" maxOccurs="1"/>
-            <xs:element name="SenderIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="CustomerIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="DivisionIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
             <xs:element name="UserIdentifier" type="xs:string" minOccurs="0" maxOccurs="1"/>
         </xs:sequence>

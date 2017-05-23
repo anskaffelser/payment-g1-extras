@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" schemaVersion="iso" queryBinding="xslt2">
 
   <title>Rules for Metadata</title>
@@ -10,8 +11,8 @@
               test="e:Version = '1.0'"
               flag="fatal">Version must be '1.0' is required.</assert>
       <assert id="PAYMENT-MD-R010"
-              test="e:SenderIdentifier"
-              flag="fatal">Sender is required.</assert>
+              test="e:CustomerIdentifier"
+              flag="fatal">Customer is required.</assert>
     </rule>
   </pattern>
 </schema>

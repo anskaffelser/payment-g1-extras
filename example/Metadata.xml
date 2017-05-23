@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Metadata xmlns="urn:fdc:difi.no:2017:payment:extras-1">
     <Version>1.0</Version>
-    <SenderIdentifier>991825827</SenderIdentifier>
+    <CustomerIdentifier>991825827</CustomerIdentifier>
     <DivisionIdentifier>Lonn</DivisionIdentifier>
     <UserIdentifier>3150tes</UserIdentifier>
 </Metadata>
