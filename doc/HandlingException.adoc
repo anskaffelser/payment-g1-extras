@@ -25,9 +25,19 @@ Element StandardBusinessDocumentHeader (SBDH) is not further descibed here, howe
 [cols="1,5", options="header"]
 |===
 | Code | Description
-| 001 | Signature validation error outer ASiC
-| 002 | Signature validation error inner ASiC
-| 003 | Decryption error
-| 004 | Missing metadata
-| 005 | Missing content
+h| 000 | Not in use +
+_All OK. Received, decrypted, legible header/metadata_
+h| 001 | Signature Validation error inner ASiC
+h| 002 | Signature Validation error outer ASiC
+h| 003 | SBDH error
+h| 004 | Technical authentication error +
+_Technical validation towards PKI and revocation status. Business rules related to authentication based upon PKI is out of scope for this code._
+h| 005 | Decryption error
+h| 006 | Local routing information/metadata error +
+_Used only in cases where business rules are unable to handle content because of errors in metadata file. Not a replacement for situations where business messages may be used._
+h| 007 | Error in decoding Base64
+h| 008 | Unable to process Outer ASiC
+h| 009 | Unable to process Inner ASiC
+h| 099 | Other +
+_Any use of this code requires reporting to the authority responsible for the transport infrastructure._
 |===
