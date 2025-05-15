@@ -11,11 +11,8 @@
 | + Exception | 1..1 | Exception
 | --+ Code | 1..1 | Code according to code list
 | --+ Description | 1..1 | Human readable description of the exception.
-| + StandardBusinessDocumentHeader | 1..1 | SBDH of which the exception is raised.
+| + StandardBusinessDocumentHeader | 1..1 | SBDH of origin which the exception is raised.
 |===
-
-Element StandardBusinessDocumentHeader (SBDH) is not further descibed here, however this element must be according to the standards used. SBDH must be identical to the SBDH of which this is an exception of.
-
 
 == Code lists
 
